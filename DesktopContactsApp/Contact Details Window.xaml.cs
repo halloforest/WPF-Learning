@@ -26,14 +26,20 @@ namespace DesktopContactsApp
         {
             InitializeComponent();
 
-            this.contact = contact;
+            if (contact == null)    // Via add button
+            {
+                this.contact = new Contact();
+            } 
+            else
+            {
+                this.contact = contact;
+                nameTextBox.Text = contact.Name;
+                emailTextBox.Text = contact.Email;
+                phoneTextBox.Text = contact.Phone;
+            }
 
             updateButton.Click += UpdateButton_Click;
             deleteButton.Click += DeleteButton_Click;
-
-            nameTextBox.Text = contact.Name;
-            emailTextBox.Text = contact.Email;
-            phoneTextBox.Text = contact.Phone;
         }
 
         private void DeleteButton_Click(object sender, RoutedEventArgs e)
@@ -56,7 +62,10 @@ namespace DesktopContactsApp
             using (var connection = new SQLiteConnection(App.databasePath))
             {
                 connection.CreateTable<Contact>(); // This operation will be ignored if this table already exist
-                connection.Update(contact);
+
+                // Contact exists in the table -> update, otherwise -> insert
+                if(connection.Table<Contact>().Any(c => c.Id == contact.Id)) connection.Update(contact);
+                else connection.Insert(contact);                     
             }
 
             Close();

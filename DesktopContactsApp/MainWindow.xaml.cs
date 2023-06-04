@@ -39,7 +39,7 @@ namespace DesktopContactsApp
             // Double click a contact from the list
             contactsListView.MouseDoubleClick += ContactsListView_MouseDoubleClick; ;
 
-            UpdateContacts();
+            UpdateContactsListView();
         }
 
         private void ContactsListView_MouseDoubleClick(object sender, MouseButtonEventArgs e)
@@ -52,17 +52,19 @@ namespace DesktopContactsApp
                 var contactDetailsWindow = new Contact_Details_Window(selectedContact);
                 contactDetailsWindow.ShowDialog();
 
-                UpdateContacts();
+                UpdateContactsListView();
             }
         }
 
         private void SearchTextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
             // Filter the name
-            var filteredList = contacts.Where(c => c.Name.Contains(searchTextBox.Text, StringComparison.OrdinalIgnoreCase)).ToList();
+            var filteredList = contacts.Where(c => c.Name.Contains(searchTextBox.Text, StringComparison.OrdinalIgnoreCase) ||
+                                                   c.Email.Contains(searchTextBox.Text, StringComparison.OrdinalIgnoreCase) ||
+                                                   c.Phone.Contains(searchTextBox.Text, StringComparison.OrdinalIgnoreCase)).ToList();
 
             // Rewrite "where"
-            var filteredList2 = from c in contacts where c.Name.Contains(searchTextBox.Text, StringComparison.OrdinalIgnoreCase) select c; 
+            // var filteredList2 = from c in contacts where c.Name.Contains(searchTextBox.Text, StringComparison.OrdinalIgnoreCase) select c; 
 
             // Alternativ - how to convert every name string, costs overhead
             // var filteredList = contacts.Where(c => c.Name.ToLower().Contains(searchTextBox.Text.ToLower())).ToList();
@@ -72,13 +74,14 @@ namespace DesktopContactsApp
 
         private void NewContactButton_Click(object sender, RoutedEventArgs e)
         {
-            var newContactWindow = new NewContactWindow();
-            newContactWindow.ShowDialog(); // Back to the previous windows only after this window is closed
+            // Open the Contact Details Window
+            var contactDetailsWindow = new Contact_Details_Window(null);
+            contactDetailsWindow.ShowDialog();
 
-            UpdateContacts();
+            UpdateContactsListView();
         }
 
-        void UpdateContacts()
+        void UpdateContactsListView()
         {
 
             using (var connection = new SQLiteConnection(App.databasePath))

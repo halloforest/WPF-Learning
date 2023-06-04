@@ -5,12 +5,10 @@ C:\---PROJ---\HV\WPF-Learning\DesktopContactsApp\bin\Debug\net6.0-windows\Deskto
 C:\---PROJ---\HV\WPF-Learning\DesktopContactsApp\bin\Debug\net6.0-windows\DesktopContactsApp.pdb
 C:\---PROJ---\HV\WPF-Learning\DesktopContactsApp\obj\Debug\net6.0-windows\DesktopContactsApp.csproj.AssemblyReference.cache
 C:\---PROJ---\HV\WPF-Learning\DesktopContactsApp\obj\Debug\net6.0-windows\MainWindow.g.cs
-C:\---PROJ---\HV\WPF-Learning\DesktopContactsApp\obj\Debug\net6.0-windows\NewContactWindow.g.cs
 C:\---PROJ---\HV\WPF-Learning\DesktopContactsApp\obj\Debug\net6.0-windows\App.g.cs
 C:\---PROJ---\HV\WPF-Learning\DesktopContactsApp\obj\Debug\net6.0-windows\DesktopContactsApp_MarkupCompile.cache
 C:\---PROJ---\HV\WPF-Learning\DesktopContactsApp\obj\Debug\net6.0-windows\DesktopContactsApp_MarkupCompile.lref
 C:\---PROJ---\HV\WPF-Learning\DesktopContactsApp\obj\Debug\net6.0-windows\MainWindow.baml
-C:\---PROJ---\HV\WPF-Learning\DesktopContactsApp\obj\Debug\net6.0-windows\NewContactWindow.baml
 C:\---PROJ---\HV\WPF-Learning\DesktopContactsApp\obj\Debug\net6.0-windows\DesktopContactsApp.g.resources
 C:\---PROJ---\HV\WPF-Learning\DesktopContactsApp\obj\Debug\net6.0-windows\DesktopContactsApp.GeneratedMSBuildEditorConfig.editorconfig
 C:\---PROJ---\HV\WPF-Learning\DesktopContactsApp\obj\Debug\net6.0-windows\DesktopContactsApp.AssemblyInfoInputs.cache

@@ -18,7 +18,7 @@
             <TextBox x:Name="phoneTextBox" Margin="0,0,0,10"/>
 
             <Button x:Name ="updateButton" Content="Add / Update" Margin="0,0,0,5"/>
-            <Button x:Name ="deleteButton" Content="Delete" Background="Red" Foreground="White"/>
+            <Button x:Name ="deleteButton" Content="Delete" Background="Red" Foreground="White" Margin="0,10,0,0"/>
         </StackPanel>
      </Grid>
 
