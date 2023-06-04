@@ -1,8 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "SYXi4LB4PybacWQRZMK7FXia2Kx+cPEym8QGWTRKLgdm51jhat/5gvnhwFw/JZIzjw3AO0dK8dHBCwESEn0LFw==",
+  "dgSpecHash": "LwDvvgDlSnT8mbwg01P5N50DCDj6fyti1HG4r0qZl8wJv9UBTTK1/jWpKiYlLUyaujwdt4rBDKuEvPZ8En1ZZQ==",
   "success": true,
   "projectFilePath": "C:\\---PROJ---\\HV\\WPF-Learning\\DesktopContactsApp\\DesktopContactsApp.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\zhongqiang.cheng\\.nuget\\packages\\sqlite-net-pcl\\1.8.116\\sqlite-net-pcl.1.8.116.nupkg.sha512",
+    "C:\\Users\\zhongqiang.cheng\\.nuget\\packages\\sqlitepclraw.bundle_green\\2.0.4\\sqlitepclraw.bundle_green.2.0.4.nupkg.sha512",
+    "C:\\Users\\zhongqiang.cheng\\.nuget\\packages\\sqlitepclraw.core\\2.0.4\\sqlitepclraw.core.2.0.4.nupkg.sha512",
+    "C:\\Users\\zhongqiang.cheng\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.0.4\\sqlitepclraw.lib.e_sqlite3.2.0.4.nupkg.sha512",
+    "C:\\Users\\zhongqiang.cheng\\.nuget\\packages\\sqlitepclraw.provider.dynamic_cdecl\\2.0.4\\sqlitepclraw.provider.dynamic_cdecl.2.0.4.nupkg.sha512",
+    "C:\\Users\\zhongqiang.cheng\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512"
+  ],
   "logs": []
 }
