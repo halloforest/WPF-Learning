@@ -30,10 +30,30 @@ namespace DesktopContactsApp
 
             contacts = new List<Contact>();
 
+            // Add new contact button
             newContactButton.Click += NewContactButton_Click;
+
+            // Search box
             searchTextBox.TextChanged += SearchTextBox_TextChanged;
 
-            ReadDatabase();
+            // Double click a contact from the list
+            contactsListView.MouseDoubleClick += ContactsListView_MouseDoubleClick; ;
+
+            UpdateContacts();
+        }
+
+        private void ContactsListView_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            var selectedContact = contactsListView.SelectedItem as Contact;
+
+            if (selectedContact != null)
+            {
+                // Open the Contact Details Window
+                var contactDetailsWindow = new Contact_Details_Window(selectedContact);
+                contactDetailsWindow.ShowDialog();
+
+                UpdateContacts();
+            }
         }
 
         private void SearchTextBox_TextChanged(object sender, TextChangedEventArgs e)
@@ -41,8 +61,12 @@ namespace DesktopContactsApp
             // Filter the name
             var filteredList = contacts.Where(c => c.Name.Contains(searchTextBox.Text, StringComparison.OrdinalIgnoreCase)).ToList();
 
+            // Rewrite "where"
+            var filteredList2 = from c in contacts where c.Name.Contains(searchTextBox.Text, StringComparison.OrdinalIgnoreCase) select c; 
+
             // Alternativ - how to convert every name string, costs overhead
             // var filteredList = contacts.Where(c => c.Name.ToLower().Contains(searchTextBox.Text.ToLower())).ToList();
+
             contactsListView.ItemsSource = filteredList;
         }
 
@@ -51,16 +75,21 @@ namespace DesktopContactsApp
             var newContactWindow = new NewContactWindow();
             newContactWindow.ShowDialog(); // Back to the previous windows only after this window is closed
 
-            ReadDatabase();
+            UpdateContacts();
         }
 
-        void ReadDatabase()
+        void UpdateContacts()
         {
 
             using (var connection = new SQLiteConnection(App.databasePath))
             {
                 connection.CreateTable<Contact>(); // This operation will be ignored if this table already exist
-                contacts = connection.Table<Contact>().ToList();
+
+                // Order by name
+                contacts = (connection.Table<Contact>().ToList()).OrderBy(c => c.Name).ToList();
+
+                // write "c => c.Name" in another way
+                // var contact = from c in contacts orderby c.Name select c;
             }
 
 

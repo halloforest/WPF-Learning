@@ -40,3 +40,5 @@ C:\---PROJ---\HV\WPF-Learning\DesktopContactsApp\bin\Debug\net6.0-windows\runtim
 C:\---PROJ---\HV\WPF-Learning\DesktopContactsApp\bin\Debug\net6.0-windows\runtimes\win-x64\native\e_sqlite3.dll
 C:\---PROJ---\HV\WPF-Learning\DesktopContactsApp\bin\Debug\net6.0-windows\runtimes\win-x86\native\e_sqlite3.dll
 C:\---PROJ---\HV\WPF-Learning\DesktopContactsApp\obj\Debug\net6.0-windows\DesktopContactsApp.csproj.CopyComplete
+C:\---PROJ---\HV\WPF-Learning\DesktopContactsApp\obj\Debug\net6.0-windows\Contact Details Window.g.cs
+C:\---PROJ---\HV\WPF-Learning\DesktopContactsApp\obj\Debug\net6.0-windows\Contact Details Window.baml
