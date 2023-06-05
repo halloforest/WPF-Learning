@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "P9W9ovktnSfNlhRRW68qFc8i12aEvySSTBn2yS50Xri4ieHKj2yEt9hlUwQ/mzLxYLq1p85eMCNcSmoTOGDZoA==",
+  "dgSpecHash": "xH2sHQizEb6cTPjzLgt2KxYEAEPEND7RRBkljkjJESVCG/9AkZnwkv0WU+hdaaK8Nlx9DKeiwvprVyaAOBLPVA==",
   "success": true,
   "projectFilePath": "C:\\---PROJ---\\HV\\WPF-Learning\\LandmarkAI\\LandmarkAI.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\zhongqiang.cheng\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

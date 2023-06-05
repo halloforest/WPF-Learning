@@ -19,3 +19,5 @@ C:\---PROJ---\HV\WPF-Learning\LandmarkAI\obj\Debug\net6.0-windows\refint\Landmar
 C:\---PROJ---\HV\WPF-Learning\LandmarkAI\obj\Debug\net6.0-windows\LandmarkAI.pdb
 C:\---PROJ---\HV\WPF-Learning\LandmarkAI\obj\Debug\net6.0-windows\LandmarkAI.genruntimeconfig.cache
 C:\---PROJ---\HV\WPF-Learning\LandmarkAI\obj\Debug\net6.0-windows\ref\LandmarkAI.dll
+C:\---PROJ---\HV\WPF-Learning\LandmarkAI\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
+C:\---PROJ---\HV\WPF-Learning\LandmarkAI\obj\Debug\net6.0-windows\LandmarkAI.csproj.CopyComplete
