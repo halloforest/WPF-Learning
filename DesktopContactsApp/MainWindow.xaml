@@ -4,8 +4,10 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DesktopContactsApp"
+        xmlns:uc="clr-namespace:DesktopContactsApp.Controls"
         mc:Ignorable="d"
-        Title="Contacts" Height="450" Width="800">
+        ResizeMode="NoResize"
+        Title="Contacts" Height="450" Width="500">
     
     <StackPanel Margin="10">
         <Button x:Name="newContactButton" Content="New Contact"/>
@@ -13,13 +15,15 @@
         <TextBox x:Name="searchTextBox"  Margin="0,5,0,5"/>
 
         <ListView x:Name="contactsListView" Height="280" Margin="0,5,0,0" >
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+                </Style>                
+            </ListView.ItemContainerStyle>
+            
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <StackPanel>
-                        <TextBlock Text="{Binding Name}" FontSize="20" FontWeight="Bold"/>
-                        <TextBlock Text="{Binding Email}" FontSize="15" Foreground="DodgerBlue"/>
-                        <TextBlock Text="{Binding Phone}" FontSize="15" FontStyle="Italic"/>
-                    </StackPanel>
+                    <uc:ContactControl Contact="{Binding}"/>
                 </DataTemplate>
             </ListView.ItemTemplate>          
         </ListView>

@@ -26,6 +26,10 @@ namespace DesktopContactsApp
         {
             InitializeComponent();
 
+            // Put this window in the central of the main window
+            Owner = Application.Current.MainWindow;
+            WindowStartupLocation = WindowStartupLocation.CenterOwner;
+
             if (contact == null)    // Via add button
             {
                 this.contact = new Contact();
@@ -40,6 +44,12 @@ namespace DesktopContactsApp
 
             updateButton.Click += UpdateButton_Click;
             deleteButton.Click += DeleteButton_Click;
+            cancelButton.Click += CancelButton_Click;
+        }
+
+        private void CancelButton_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
         }
 
         private void DeleteButton_Click(object sender, RoutedEventArgs e)

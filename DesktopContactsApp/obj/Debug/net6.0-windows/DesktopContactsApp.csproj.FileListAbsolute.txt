@@ -40,3 +40,6 @@ C:\---PROJ---\HV\WPF-Learning\DesktopContactsApp\bin\Debug\net6.0-windows\runtim
 C:\---PROJ---\HV\WPF-Learning\DesktopContactsApp\obj\Debug\net6.0-windows\DesktopContactsApp.csproj.CopyComplete
 C:\---PROJ---\HV\WPF-Learning\DesktopContactsApp\obj\Debug\net6.0-windows\Contact Details Window.g.cs
 C:\---PROJ---\HV\WPF-Learning\DesktopContactsApp\obj\Debug\net6.0-windows\Contact Details Window.baml
+C:\---PROJ---\HV\WPF-Learning\DesktopContactsApp\obj\Debug\net6.0-windows\Controls\ContactControl.g.cs
+C:\---PROJ---\HV\WPF-Learning\DesktopContactsApp\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\---PROJ---\HV\WPF-Learning\DesktopContactsApp\obj\Debug\net6.0-windows\Controls\ContactControl.baml
