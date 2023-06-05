@@ -8,26 +8,27 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width=".6*"/>
+            <ColumnDefinition Width=".4*"/>
         </Grid.ColumnDefinitions>
         
         <StackPanel Margin="10">
             <Button x:Name="selectImageButton" Content="Select Image" HorizontalAlignment="Center" />
             <TextBlock x:Name="infoTextBlock" Margin="0,5,0,5" TextWrapping="Wrap"/>
-            <Image x:Name="selectedImage" Margin="10"/>
+            <Image x:Name="selectedImage" Height =" 300" Margin="10"/>
         </StackPanel>
 
-        <ListView x:Name="predictionListView" Grid.Column="1" Width="200" VerticalAlignment="Center">
-            <ListView.View>
-                <GridView>
-                    <GridViewColumn Header="Tags" Width="100" DisplayMemberBinding="{Binding tagName}"/>
-                    <GridViewColumn Header="Probability" Width="100" DisplayMemberBinding="{Binding Path=probability,StringFormat=P2}"/>
-                </GridView>                
-            </ListView.View>
-
-
-        </ListView>
-
+        <StackPanel Margin="10" Grid.Column="1">
+            <TextBlock Text="Prediction" FontWeight="Bold" Margin="0,0,0,10"/>
+            <ListView x:Name="predictionListView" Width="200" VerticalAlignment="Top" HorizontalAlignment="Left">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Tags" Width="100" DisplayMemberBinding="{Binding tagName}"/>
+                        <GridViewColumn Header="Probability" Width="100" DisplayMemberBinding="{Binding Path=probability,StringFormat=P2}"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </StackPanel>
+        
     </Grid>
 </Window>

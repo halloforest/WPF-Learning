@@ -74,8 +74,6 @@ namespace LandmarkAI
             }
             var responseString = await response.Content.ReadAsStringAsync();
 
-            infoTextBlock.Text = "Response from Service: \n" + responseString;
-
             var predictions = (List<Prediction>)(JsonConvert.DeserializeObject<CustomVision>(responseString)).predictions;
             predictionListView.ItemsSource = predictions;
         }
